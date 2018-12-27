@@ -222,6 +222,8 @@ class CoursesApiDataLoader(AbstractDataLoader):
     def format_course_data(self, body):
         defaults = {
             'title': body['name'],
+            'short_description': body['short_description'],
+            'card_image_url': body['media']['image']['small'],
         }
 
         return defaults
